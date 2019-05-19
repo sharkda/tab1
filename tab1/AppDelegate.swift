@@ -16,7 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        ///original example to use mainTabBar///
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        let mainVC = MainTabBarController()
+        window?.rootViewController = mainVC 
         return true
+        
+        ///below will use UINav, no tabBar. so only firstVC will be shown as rootVC
+//        window = UIWindow()
+//        window?.makeKeyAndVisible()
+//        let firstVC = FirstViewController()
+//        window?.rootViewController = UINavigationController(rootViewController: firstVC )
+//        let navigationBarAppearace = UINavigationBar.appearance()
+//        navigationBarAppearace.backgroundColor = .clear
+//        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
